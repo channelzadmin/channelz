@@ -27,7 +27,7 @@ import FeedPosts from "../../components/FeedPosts/FeedPosts";
 import SuggestedUsers from "../../components/SuggestedUsers/SuggestedUsers";
 
 const HomePage = () => {
-  const url = "https://channelz1.vercel.app";
+  const url = "https://channelz-three.vercel.app";
   const shareText = `Visit this app now: ${url}`;
 
   return (

@@ -44,7 +44,7 @@ const ProfilePage = () => {
 
   const userNotFound = !isLoading && !userProfile;
   if (userNotFound) return <UserNotFound />;
-  const url = "https://channelz1.vercel.app";
+  const url = "https://channelz-three.vercel.app";
   const shareText = `Visit this app now: ${url}`;
 
   return (
