@@ -125,7 +125,7 @@ import {
   useDisclosure,
   Icon,
 } from "@chakra-ui/react";
-import { StarIcon } from "@chakra-ui/icons"; // Import the verification icon
+import { CheckIcon, StarIcon } from "@chakra-ui/icons"; // Import the verification icon
 import useUserProfileStore from "../../store/userProfileStore";
 import useAuthStore from "../../store/authStore";
 import EditProfile from "./EditProfile";
@@ -171,8 +171,11 @@ const ProfileHeader = () => {
             {userProfile.username}
             {/* Display the checkmark if the user is verified */}
             {userProfile.isVerified && (
-              <Icon as={StarIcon} color="green.300" boxSize={4} ml={2} />
+              <Icon as={CheckIcon} color="green.300" boxSize={4} ml={2} />
             )}
+            {/* {user.isSponsored && (
+              <Icon as={StarIcon} color="yellow.300" boxSize={4} ml={1} />
+            )} */}
           </Text>
 
           {visitingOwnProfileAndAuth && (

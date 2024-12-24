@@ -49,7 +49,7 @@ const HomePage = () => {
         <Flex justify="left" gap={5}>
           <EmailShareButton
             url={url}
-            subject="Check out this app"
+            subject="Check out my profile in this app"
             body={shareText}
           >
             <EmailIcon size={40} round={true} />

@@ -16,7 +16,7 @@ const SuggestedUsers = () => {
       {suggestedUsers.length !== 0 && (
         <Flex alignItems={"center"} justifyContent={"space-between"} w={"full"}>
           <Text fontSize={12} fontWeight={"bold"} color={"gray.500"}>
-            Suggested for you
+            Suggested for you!
           </Text>
           <Text
             fontSize={12}
@@ -33,12 +33,19 @@ const SuggestedUsers = () => {
         <SuggestedUser user={user} key={user.id} />
       ))}
 
-      {/* <Box fontSize={12} color={"gray.500"} mt={5} alignSelf={"start"}>
-				© 2023 Built By{" "}
-				<Link href='https://www.youtube.com/@asaprogrammer_' target='_blank' color='blue.500' fontSize={14}>
-					As a Programmer
-				</Link>
-			</Box> */}
+      <Box fontSize={12} color={"gray.500"} mt={5} alignSelf={"start"}>
+        {/* © 2023 Built By{" "}
+        <Link
+          href="https://www.youtube.com/@asaprogrammer_"
+          target="_blank"
+          color="blue.500"
+          fontSize={14}
+        >
+          As a Programmer
+        </Link> */}
+        The check marks indicate ChannelZ Verified Accounts. The Star Marks
+        indicate Sponsored Accounts.
+      </Box>
     </VStack>
   );
 };

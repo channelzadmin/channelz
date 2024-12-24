@@ -73,7 +73,7 @@ const ProfilePage = () => {
         <Flex justify="left" gap={5} mt={10}>
           <EmailShareButton
             url={url}
-            subject="Check out this App"
+            subject="Check out my profile in this App"
             body={shareText}
           >
             <EmailIcon size={40} round={true} />

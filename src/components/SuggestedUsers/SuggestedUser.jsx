@@ -57,7 +57,7 @@
 // export default SuggestedUser;
 
 import { Avatar, Box, Button, Flex, VStack, Icon } from "@chakra-ui/react";
-import { StarIcon } from "@chakra-ui/icons"; // Import the checkmark icon
+import { CheckIcon, StarIcon } from "@chakra-ui/icons"; // Import the checkmark icon
 import useFollowUser from "../../hooks/useFollowUser";
 import useAuthStore from "../../store/authStore";
 import { Link } from "react-router-dom";
@@ -93,7 +93,10 @@ const SuggestedUser = ({ user, setUser }) => {
               {user.fullName}
               {/* Conditionally render the checkmark if user is verified */}
               {user.isVerified && (
-                <Icon as={StarIcon} color="green.300" boxSize={4} ml={1} />
+                <Icon as={CheckIcon} color="green.300" boxSize={4} ml={1} />
+              )}
+              {user.isSponsored && (
+                <Icon as={StarIcon} color="yellow.300" boxSize={4} ml={1} />
               )}
             </Box>
           </Link>
