@@ -125,7 +125,7 @@ import {
   useDisclosure,
   Icon,
 } from "@chakra-ui/react";
-import { CheckIcon, StarIcon } from "@chakra-ui/icons"; // Import the verification icon
+import { CheckIcon, StarIcon } from "@chakra-ui/icons"; // Import the verification and star icons
 import useUserProfileStore from "../../store/userProfileStore";
 import useAuthStore from "../../store/authStore";
 import EditProfile from "./EditProfile";
@@ -139,10 +139,15 @@ const ProfileHeader = () => {
     userProfile?.uid
   );
 
+  // Check if userProfile and isSponsored are defined
   const visitingOwnProfileAndAuth =
-    authUser && authUser.username === userProfile.username;
+    authUser && authUser.username === userProfile?.username;
   const visitingAnotherProfileAndAuth =
-    authUser && authUser.username !== userProfile.username;
+    authUser && authUser.username !== userProfile?.username;
+
+  if (!userProfile) {
+    return null; // Or return a loading state if the userProfile is not yet available
+  }
 
   return (
     <Flex
@@ -173,9 +178,10 @@ const ProfileHeader = () => {
             {userProfile.isVerified && (
               <Icon as={CheckIcon} color="green.300" boxSize={4} ml={2} />
             )}
-            {/* {user.isSponsored && (
+            {/* Display the star if the user is sponsored */}
+            {userProfile.isSponsored && (
               <Icon as={StarIcon} color="yellow.300" boxSize={4} ml={1} />
-            )} */}
+            )}
           </Text>
 
           {visitingOwnProfileAndAuth && (
