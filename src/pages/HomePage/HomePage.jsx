@@ -46,7 +46,7 @@ const HomePage = () => {
         </Box>
       </Flex>
       <Box mt={10}>
-        <Flex justify="left" gap={5}>
+        <Flex justify="left" gap={2}>
           <EmailShareButton
             url={url}
             subject="Check out my profile in this app"
@@ -65,8 +65,8 @@ const HomePage = () => {
           </LinkedinShareButton>
         </Flex>
       </Box>
-      <Box mt={10}>
-        <Flex justify="left" gap={5}>
+      <Box mt={2}>
+        <Flex justify="left" gap={2}>
           <RedditShareButton url={url} title={shareText}>
             <RedditIcon size={40} round={true} />
           </RedditShareButton>
@@ -81,8 +81,8 @@ const HomePage = () => {
           </ViberShareButton>
         </Flex>
       </Box>
-      <Box mt={10}>
-        <Flex justify="left" gap={5}>
+      <Box mt={2}>
+        <Flex justify="left" gap={2}>
           <WeiboShareButton url={url} title={shareText}>
             <WeiboIcon size={40} round={true} />
           </WeiboShareButton>
